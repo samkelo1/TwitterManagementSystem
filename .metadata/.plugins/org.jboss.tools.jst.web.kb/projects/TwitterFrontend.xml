@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects>
+  <project name="TwitterBackend"/>
+ </depends-on-projects>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/Users/User/git/new lib/servlet-api.jar"/>
+  <path value="C:/Users/User/git/new lib/standard.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/c-1_0-rt.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/c-1_0.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/c.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/fmt-1_0-rt.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/fmt-1_0.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/fmt.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/fn.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/permittedtaglibs.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/scriptfree.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/sql-1_0-rt.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/sql-1_0.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/sql.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/x-1_0-rt.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/x-1_0.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/x.tld" project="TwitterFrontend"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/User/git/new lib/javaee.jar"/>
+  <path value="C:/Users/User/git/new lib/javax.ejb.jar"/>
+  <path value="C:/Users/User/git/new lib/jsf-impl.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl.jar/meta-inf/html_basic.tld" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-impl.jar/meta-inf/jsf_core.tld" project="TwitterFrontend"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/User/git/new lib/jsf-api.jar"/>
+  <path value="C:/Users/User/git/Project/TwitterFrontend/WebContent/WEB-INF/lib/twitter4j-core-4.0.7.jar"/>
+  <path value="C:/Users/User/git/new lib/jsp-api-2.1.jar"/>
+  <path value="C:/Users/User/git/new lib/jsf-facelets.jar">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-facelets.jar/meta-inf/faces-config.xml" project="TwitterFrontend"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-facelets.jar/meta-inf/jsf-core.taglib.xml" project="TwitterFrontend"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-facelets.jar/meta-inf/jsf-html.taglib.xml" project="TwitterFrontend"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-facelets.jar/meta-inf/jsf-ui.taglib.xml" project="TwitterFrontend"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-facelets.jar/meta-inf/jstl-core.taglib.xml" project="TwitterFrontend"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-facelets.jar/meta-inf/jstl-fn.taglib.xml" project="TwitterFrontend"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/User/git/new lib/jsf-portlet.jar">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-portlet.jar/meta-inf/faces-config.xml" project="TwitterFrontend"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jsf-portlet.jar/meta-inf/jsf-portlet.tld" project="TwitterFrontend"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/User/git/new lib/twitter4j-core-4.0.7.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jboss.cdi.core"/>
+  <el>
+   <linked-el length="23" name="%0" offset="817" path="%1"/>
+   <linked-el length="33" name="%0" offset="490" path="%1"/>
+   <linked-el length="25" name="%0" offset="711" path="%1"/>
+   <linked-el length="39" name="%0" offset="593" path="%2"/>
+   <linked-el length="36" name="%0" offset="721" path="%2"/>
+   <linked-el length="25" name="%0" offset="603" path="%1"/>
+   <linked-el length="39" name="%3" offset="593" path="%2"/>
+   <linked-el length="14" name="%3" offset="592" path="%4"/>
+   <linked-el length="14" name="%5" offset="592" path="%4"/>
+   <linked-el length="23" name="%6" offset="817" path="%1"/>
+   <linked-el length="25" name="%6" offset="711" path="%1"/>
+   <linked-el length="25" name="%6" offset="603" path="%1"/>
+   <linked-el length="33" name="%4" offset="490" path="%1"/>
+   <linked-el length="39" name="%4" offset="593" path="%2"/>
+   <linked-el length="36" name="%4" offset="721" path="%2"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="twittercontroller" value="%0"/>
+  <alias path="/TwitterFrontend/src/model/Twitterer.java" value="%3"/>
+  <alias path="twitterer" value="%5"/>
+  <alias path="/TwitterBackend/ejbModule/entities/TwitterEntity.java" value="%6"/>
+  <alias path="/TwitterFrontend/WebContent/tweetsList.xhtml" value="%1"/>
+  <alias path="/TwitterFrontend/src/controller/TwitterController.java" value="%4"/>
+  <alias path="/TwitterFrontend/WebContent/index.xhtml" value="%2"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
+</kb-project>

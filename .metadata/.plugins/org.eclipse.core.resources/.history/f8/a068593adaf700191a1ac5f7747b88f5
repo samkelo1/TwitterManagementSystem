@@ -1,0 +1,105 @@
+package controller;
+
+import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
+import javax.servlet.ServletException;
+
+import entities.TwitterEntity;
+import model.Twitterer;
+import service.TwitterEJB;
+import twitter4j.Status;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
+import twitter4j.auth.AccessToken;
+
+@ManagedBean(name = "twittercontroller")
+@SessionScoped
+public class TwitterController {
+	
+	@EJB
+	private TwitterEJB twitterEJB;
+	
+	private Twitter twitter;
+	private Status status;
+
+	@ManagedProperty(value="#{twitterer}")
+	private Twitterer twitterer;// = new Twitterer();
+	
+	public Twitterer getTwitterer() {
+		return twitterer;
+	}
+
+	public void setTwitterer(Twitterer twitterer) {
+		this.twitterer = twitterer;
+	}
+
+	private TwitterDriver driver = new TwitterDriver();
+
+	private List<TwitterEntity> tweetList = new ArrayList<>();
+
+	public List<TwitterEntity> getTweetList() {
+		tweetList = twitterEJB.getTweets();
+		return tweetList;
+	}
+
+	public String viewTweets() {
+		return "tweetsList.xhtml";
+	}
+
+	public String addNewTweet() {
+		Date date = new Date();
+		Timestamp timestamp = new Timestamp(date.getTime());
+		
+		try
+		{
+			tweetOut(twitterer.getTweetBody());
+		}  catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
+		twitterEJB.addNew(twitterer.getEntity(driver.getTweetID(), timestamp));
+		
+		return viewTweets();
+	}
+
+	public Twitterer getTweets() {
+		return twitterer;
+	}
+
+	public void setTweetList(List<TwitterEntity> tweetList) {
+		this.tweetList = tweetList;
+	}
+	
+	/*private void tweet() {
+		try
+		{
+			driver.tweetOut(twitterer.getTweetBody());
+		}  catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+	}*/
+	
+	public void tweetOut(String message) throws ServletException, TwitterException {
+		twitter = TwitterFactory.getSingleton();
+		twitter.setOAuthConsumer("zK2pnuTXz4XELKA50Sn64pIXJ", "XFGBQGt7RJw16eJ4xilWYZVXJSIhPbgVfDJyFHhlhK7a0DwAuZ");
+		AccessToken accessToken = new AccessToken("1177360425576534016-QjD9Q4DbnAnLXoSwPZkF9A4veABpOu","JlmqDuVHwbTTc38CXCYwAvurfDq1ukxnzyjVMmN9uSh1P");		
+		twitter.setOAuthAccessToken(accessToken);
+		
+		status = twitter.updateStatus(message);
+	}
+
+	public Long getTweetID() {
+		return status.getId();
+	}
+}

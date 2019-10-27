@@ -1,0 +1,61 @@
+package model;
+
+//import java.sql.Timestamp;
+import java.util.Date;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import entities.TwitterEntity;
+
+@ManagedBean(name = "twitterer")
+@SessionScoped
+public class Twitterer {
+
+	private Timestamp timestamp;
+	private String property;
+	private String tweetBody;
+	
+	private Long tweetID;
+
+	public Timestamp getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(Timestamp timestamp) {
+		this.timestamp = timestamp;
+	}
+
+	public String getProperty() {
+		return property;
+	}
+
+	public void setProperty(String property) {
+		this.property = property;
+	}
+
+	public String getTweetBody() {
+		return tweetBody;
+	}
+
+	public void setTweetBody(String tweetBody) {
+		this.tweetBody = tweetBody;
+	}
+
+	public Long getTweetID() {
+		return tweetID;
+	}
+
+	public void setTweetID(Long tweetID) {
+		this.tweetID = tweetID;
+	}
+	
+	public TwitterEntity getEntity(Long _tweetID) {
+		TwitterEntity twitterEntity = new TwitterEntity();
+		twitterEntity.setProperty(property);
+		twitterEntity.setTimestamp(new Timestamp(date));
+		twitterEntity.setTweetBody(tweetBody);
+		twitterEntity.setTweetID(_tweetID);
+		return twitterEntity;
+	}
+}

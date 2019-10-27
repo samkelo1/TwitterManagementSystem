@@ -1,0 +1,25 @@
+package controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+
+import twitter4j.Status;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
+
+public class TwitterDriver {
+	
+	private Twitter twitter;
+	
+	public void tweetOut() throws ServletException, TwitterException {
+		twitter = TwitterFactory.getSingleton();
+		
+		//System.out.println(twitter.getOAuthAccessToken());
+		//try {
+			Status status = twitter.updateStatus("Testing servlet");
+		
+	}
+
+}

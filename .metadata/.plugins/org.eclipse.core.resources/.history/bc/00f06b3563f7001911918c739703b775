@@ -1,0 +1,82 @@
+package controller;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
+import javax.servlet.ServletException;
+
+import entities.TwitterEntity;
+import model.Twitterer;
+import service.TwitterEJB;
+/*import twitter4j.Status;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
+*/
+@ManagedBean(name = "twittercontroller")
+@SessionScoped
+public class TwitterController {
+	
+	@EJB
+	private TwitterEJB twitterEJB;
+
+	private Twitterer twitterer = new Twitterer();
+	
+	//private Twitter twitter;
+	//@ManagedProperty(value="#{driver}")
+	private TwitterDriver driver;// = new TwitterDriver() throws ServletException;
+
+	private List<TwitterEntity> tweetList = new ArrayList<>();
+
+	public List<TwitterEntity> getTweetList() {
+		//tweetList = twitterEJB.getAllTweets();
+		return tweetList;
+	}
+
+	public String viewTweets() {
+		return "tweetsList.xhtml";
+	}
+
+	//Driver
+	/*public TwitterDriver getDriver() throws TwitterException {
+		return driver;
+	}
+
+	public void setDriver(TwitterDriver driver) throws TwitterException {
+		this.driver = driver;
+	}
+*/
+	public String addNewTweet() {
+		//tweet();
+		
+		twitterEJB.addNew(twitterer.getEntity());
+		
+		return "tweetsList.xhtml";
+	}
+
+	public Twitterer getTweets() {
+		return twitterer;
+	}
+
+	public void setTweetList(List<TwitterEntity> tweetList) {
+		this.tweetList = tweetList;
+	}
+	
+	/*private void tweet() {
+		try
+		{
+			driver = new TwitterDriver(); 
+			driver.tweetOut();
+		} /*catch (TwitterException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+	}*/
+}
